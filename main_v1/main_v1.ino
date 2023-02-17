@@ -45,15 +45,15 @@ void setup() {
   pinMode(TRIG, OUTPUT);  
   pinMode(ECHO, INPUT); 
 
-//  claw.attach(7);
-//  arrow.attach(2);
-//  air.attach(12);
-//
-//  claw.write(10);
-//  delay(500);
-//  arrow.write(0);
-//  delay(500);
-//  air.write(120);
+  claw.attach(7);
+  arrow.attach(2);
+  air.attach(12);
+
+  claw.write(10);
+  delay(500);
+  arrow.write(0);
+  delay(500);
+  air.write(120);
   
 }
 
@@ -124,23 +124,23 @@ void loop() {
 //  Serial.println(distance);
 
 
-//  if (distance == 20){
-//    if (QR_Scanner.available()) 
-//  {
-//    while (QR_Scanner.available()) 
-//    {
-////      char QR = QR_Scanner.read(); 
-////      QRstring += QR; 
-//      char i = QR_Scanner.read(); 
-//      QR += i; 
-//    }
-//    Serial.println(QR);
-//  }
-//  if (QR.indexOf("c") == 0) {
-//    pick_up();
-//    Serial.println("test");
-//  }
-//  }
+  if (distance == 20){
+    if (QR_Scanner.available()) 
+  {
+    while (QR_Scanner.available()) 
+    {
+//      char QR = QR_Scanner.read(); 
+//      QRstring += QR; 
+      char i = QR_Scanner.read(); 
+      QR += i; 
+    }
+    Serial.println(QR);
+  }
+  if (QR.indexOf("c") == 0) {
+    pick_up();
+    Serial.println("test");
+  }
+  }
   
   if (IS_BLACK_LEFT==0 && IS_BLACK_RIGHT==0 && IS_BLACK_MID==1) {
     run();
